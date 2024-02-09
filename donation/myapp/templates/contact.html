@@ -6,6 +6,12 @@
 
 <section class="contact-section section-padding" id="section_6">
     <div class="container">
+        {% for msg in messages %}
+        <div class="alert alert-{{msg.level_tag}} alert-dismissible fade show  name" role="alert" style="margin-top: 20px;">
+        <strong> {{msg.message}}</strong>
+        <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+        </div>
+        {% endfor %}
         <div class="row">
 
             <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
@@ -52,6 +58,7 @@
 
             <div class="col-lg-5 col-12 mx-auto">
                 <form class="custom-form contact-form" action="#" method="post" role="form">
+                    {% csrf_token %}
                     <h2>Contact form</h2>
 
                     <p class="mb-4">Or, you can just send an email:
@@ -59,11 +66,11 @@
                     </p>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <input type="text" name="first-name" id="first-name" class="form-control" placeholder="first name" required>
+                            <input type="text" name="first" id="first-name" class="form-control" placeholder="first name" required>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-12">
-                            <input type="text" name="last-name" id="last-name" class="form-control" placeholder="last name" required>
+                            <input type="text" name="last" id="last-name" class="form-control" placeholder="last name" required>
                         </div>
                     </div>
 
