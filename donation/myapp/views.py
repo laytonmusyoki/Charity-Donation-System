@@ -41,6 +41,16 @@ def news(request):
     return render(request,'news.html')
 
 
+def elimu(request):
+    return render(request,'elimu.html')
+
 
 def donate(request):
     return render(request,'donate.html')
+
+
+def health(request):
+    return render(request,'better.html')
+
+def family(request):
+    return render(request,'family.html')
