@@ -30,7 +30,7 @@ def contact(request):
         try:
             msg.attach_alternative(contact,'text/html')
             msg.send()
-            messages.success(request,'Your message has been sent successfully')
+            messages.success(request,f'{first} your message has been sent successfully')
         except Exception as e:
             print(e)
             messages.error(request,'There was an error sending your message')
