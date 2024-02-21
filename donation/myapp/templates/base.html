@@ -71,6 +71,15 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'signout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'signin' %}">Login</a>
+                        </li>
+                        {% endif %}
 
                         <li class="nav-item ms-3">
                             <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'donate' %}">Donate</a>

@@ -6,8 +6,18 @@ def unauthenticated(view_func):
         if request.user.is_authenticated:
             return view_func(request, *args, **kwargs)
         else:
-            messages.warning(request, 'You need to login first')
-            return redirect('login')
+            messages.info(request, 'You need to login first before you make your donation')
+            return redirect('signin')
+    return wrapper
+
+
+def authenticated(view_func):
+    def wrapper(request,*args,**kwargs):
+        if request.user.is_authenticated:
+            messages.info(request, 'You need to logout first')
+            return redirect('home')
+        else:
+            return view_func(request, *args, **kwargs)
     return wrapper
 
 
