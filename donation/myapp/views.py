@@ -6,7 +6,8 @@ from django.contrib import messages
 from .decorators import unauthenticated,authenticated
 from .forms import UserRegistration
 from django.contrib.auth import login,logout,authenticate
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
+
 
 # Create your views here.
 def home(request):
@@ -90,7 +91,7 @@ def elimu(request):
 
 
 @unauthenticated
-def donate(request):
+def donate(request,organization):
     return render(request,'donate.html')
 
 

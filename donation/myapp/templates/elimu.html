@@ -6,6 +6,46 @@
 {% block content %}
 
 
+<section class="section-padding section-bg" style="background: rgb(230, 218, 230) !important;" id="section_2">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <img src="/static/images/elimu.jpg" class="custom-text-box-image img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="custom-text-box">
+                    <h2 class="mb-2">Our Story</h2>
+
+                    <h5 class="mb-3" style="color: blue;">Elimu Bora Organization</h5>
+
+                    <p class="mb-0">At Kind Elimu Bora Foundation, we believe in the transformative power of kindness. Every action, every donation, and every volunteer hour contributes to building a brighter, more compassionate world. Elimu Bora provides quality education for disadvantaged students in Kenya through donations, scholarships, and community partnerships, aiming to break the cycle of poverty and foster social mobility.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box mb-lg-0">
+                            <h5 class="mb-3" style="color: blue;">Our Mission</h5>
+
+                            <p>Striving for Meaningful Impact and Compassionate Outreach</p>    
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
+                            <div class="counter-thumb"> 
+                                <span class="counter-text"><a href="{% url 'donate' organization='elimu' %}" style="background: rgb(222, 90, 90) !important;" class="custom-btn btn">Donate now</a></span>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 {% include 'includes/footer.html' %}
 {% endblock %}

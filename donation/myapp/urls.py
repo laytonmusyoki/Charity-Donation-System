@@ -13,5 +13,5 @@ urlpatterns = [
     path('health/',health,name='health'),
     path('contact/',contact,name='contact'),
     path('family/',family,name='family'),
-    path('donate/',donate,name='donate'),
+    path('donate/<str:organization>/',donate,name='donate'),
 ]
