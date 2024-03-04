@@ -34,3 +34,4 @@ def allowed_users(user_roles=[]):
                 return redirect('home')
         return wrapper
     return decorators
+
